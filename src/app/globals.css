@@ -374,6 +374,9 @@ tr:last-child td { border-bottom: 0; }
   70% { box-shadow: 0 0 0 7px rgba(62,90,104,0); }
   100% { box-shadow: 0 0 0 0 rgba(62,90,104,0); }
 }
+@media (prefers-reduced-motion: reduce) {
+  .replay-pulse { animation: none; }
+}
 .replay-metrics {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
   margin-top: 12px; border: 1px solid var(--line); border-radius: 7px; overflow: hidden;
