@@ -1,154 +1,68 @@
-# Video walkthrough — ≤5 minutes
+# Mizan video walkthrough — target 4:45
 
-They said explicitly: show the system in action, explain how human and AI interact, and name the
-trade-offs. Everything below serves those three. Record in one take if you can; a slightly rough take
-that reasons out loud beats a polished one that narrates features.
+Use the deployed build. Open these in separate tabs before recording: Queue, How it works, `lg-1014`, `lg-1032`, and Evals. Zoom to roughly 110%. On Evals, click **Replay the recorded set** once and wait for the green completion line.
 
----
+## 0:00–0:30 · Problem and promise
 
-## 0:00 – 0:35 · The math problem
+**On screen:** Queue page, headline and routing summary.
 
-> LaunchGood charges zero platform fees. Revenue is optional donor tips on $688 million raised across
-> 155 countries. So when review work scales linearly with growth, they can't hire their way out of
-> it — the unit economics won't allow it.
+> Hi, I’m Numaan. I built Mizan, a zakat eligibility verification copilot for LaunchGood. The policy is already published. The scaling problem is applying it consistently across campaign narratives, budgets, registration documents, websites, and beneficiary records.
 >
-> I picked zakat verification. LaunchGood publishes a zakat policy: eight Quranic categories, which
-> ones they verify, a one-eighth administrative ceiling. It's a considered document. The policy isn't
-> the problem. Applying it the same way every time, with evidence, at that scale with a small team —
-> that's the problem.
+> Mizan does the reading and assembles the case. A person still decides. The goal is not an automatic religious or trust decision; it is a faster, more consistent review with evidence a person can audit.
 
-*On screen: the queue page.*
+## 0:30–1:10 · The human/AI boundary
 
-## 0:35 – 1:15 · The boundary, stated up front
+**On screen:** How it works, stages 1–7.
 
-> Before I show anything working, the design decision everything else follows from.
+> The boundary is enforced in the system shape. Deterministic code first scans raw submitted text for model-directed instructions. A lower-cost model extracts evidence as exact quotes. Code verifies that every quote literally exists and deletes anything that fails before the adjudication model can see it.
 >
-> There is no auto-approve path in this system. Not as a policy — as a type. The routing type has no
-> approve member, so no branch of the router can grant a badge. Six outcomes, all six are a person.
+> The second model assesses each criterion only against verified evidence. Arithmetic, category posture, completeness, duplicate detection, and routing remain deterministic. The routing type has no approve member, so every path ends with a person.
+
+## 1:10–2:15 · When deterministic evidence changes the lane
+
+**On screen:** `lg-1014`; show “Why it landed here,” Budget, then one highlighted source.
+
+> This school-support case is the clearest example. The model read five sources, retained twenty-one verified quotes, and marked every language-based criterion satisfied. Yet the case is priority review.
 >
-> That's unusual, because automating the human away is normally the point. Here's why zakat is
-> different. Zakat is an obligation discharged, not a payment made. If a donor's zakat reaches an
-> ineligible recipient, their obligation isn't fulfilled — and they never find out. No chargeback, no
-> complaint, no correction. The loss is silent and it lands on someone who trusted the badge.
+> The organizer declared six percent overhead. Mizan ignores that classification flag and re-derives the number from the line labels. Including field staff who perform eligibility visits produces twelve-point-eight percent, just above the twelve-point-five percent ceiling.
 >
-> A system whose mistakes are invisible to the people they harm shouldn't write them at machine
-> speed. So the win isn't removing the reviewer. It's ten minutes instead of ninety, with two
-> reviewers reaching the same answer.
+> That classification is genuinely debatable, so the system does not accuse or reject. It shows both calculations and asks a reviewer how the money is actually used. Every cited quote is highlighted in its original context, because even a correct quote can mislead when context is hidden.
 
-*On screen: `/how-it-works`, scroll the stage table showing deterministic / model / human.*
+## 2:15–2:55 · Adversarial input without automatic punishment
 
-## 1:15 – 2:20 · A case where the model and the arithmetic disagree
+**On screen:** `lg-1032`, Integrity panel and matched text.
 
-*Open `lg-1014` — the Bangladesh school-funding campaign.*
-
-> Every criterion here came back satisfied. The model read five documents, pulled twenty-one quotes,
-> and found nothing wrong.
+> This submission contains an instruction directed at the reviewing model. Detection happens on raw text before any model call, so the flag is independent of a model that may already have been influenced.
 >
-> The case is still at the top of the priority queue. Look at the budget panel: the organizer declared
-> six per cent overhead. Derived from the line labels it's twelve point eight, against a twelve point
-> five ceiling. One line — "field staff salaries for eligibility verification visits" — is defensible
-> either way, and that's exactly why a person decides it and not a model.
+> A match escalates the case but never suppresses it. Automatic suppression would create an easy sabotage path: someone could quote trigger language in a rival’s submission. Mizan shows the exact match and sends the raw source to a person.
+
+## 2:55–3:50 · Run the evaluator live
+
+**On screen:** Evals. Click **Replay the recorded set**; hold on the running state, then the completed table.
+
+> This is a real replay, not a decorative dashboard. The page is seeded with five verbatim model recordings. Clicking here sends them through span verification, deterministic checks, scoring, and routing again, without an API key or new model spend.
 >
-> The check ignores the organizer's own classification flag entirely. Mislabelling overhead as
-> programme cost is the cheapest way to clear that ceiling: no forgery, and invisible to a reviewer
-> skimming a budget table. So the reviewer sees both numbers and where they diverge, which accuses
-> nobody of anything.
-
-*Scroll to the evidence. Expand a source document.*
-
-> Every quote is highlighted in the document it came from. That's the trust mechanic — an accurate
-> quote can still mislead, and the only defence is showing what surrounds it.
-
-## 2:20 – 3:05 · Where the AI is wrong, and what catches it
-
-*Open `lg-1032` — the injection case. Point at the integrity panel.*
-
-> This campaign's text contains instructions aimed at the model reviewing it. That gets detected by
-> regex on raw text before any model reads it, so a positive is an independent fact rather than
-> something inferred from a model that may already have been influenced.
+> Four of five reach the exact expected lane. The fifth goes to a safer lane because its minimum criterion confidence is seventy-eight percent, below the eighty-five percent fast-lane floor. Across these five recorded cases there are zero false approves, zero false rejects, one hundred percent citation validity, and one of one injection caught.
 >
-> Note what it does *not* do: it doesn't suppress the campaign. Auto-suppressing on a keyword match
-> would let anyone sabotage a rival by quoting these phrases. It escalates, with the matched text
-> shown, and a person reads the source.
+> The corpus contains twenty-four labelled cases, but nineteen do not yet have recorded model output. They are visibly excluded rather than counted as passes. The same replay runs in CI, and the workflow fails on any false approve.
 
-*Now hit "Delete the supporting documents" in the Break-it-on-purpose panel — requires a key.*
+## 3:50–4:35 · Trade-offs and the next production step
 
-> This mutates the documents and re-runs live. Because the text changed, no fixture can match it —
-> which is the point. It shows the system reasoning about the document in front of it, not replaying
-> a cached verdict.
+**On screen:** How it works, “What breaks at scale,” then return to the queue.
+
+> Three trade-offs are deliberate. No auto-approve preserves trust but limits throughput. Evidence-request drafts use deterministic templates: less elegant prose, but no invented document requirements. Duplicate detection is lexical rather than semantic, so two families with similar needs are not treated as fraud just because their stories are topically close.
 >
-> Confidence collapses and it drops out of any fast lane. A system that stayed confident here would be
-> reading the applicant's self-description as proof.
+> The prototype gaps are explicit: decisions are in memory, there is no production permissions layer, only five cases are recorded, and the gold labels have one author. My next steps would be Postgres with role-based access, complete corpus recordings, and an inter-rater dataset from real reviewers. That dataset is how I would measure whether Mizan saves time without lowering trust.
 
-## 3:05 – 4:00 · Evals
+## 4:35–4:45 · Close
 
-*Open `/evals`.*
+**On screen:** Queue headline: “Every case still reaches a person.”
 
-> Two error types, never averaged together. A single accuracy number would let one hide behind the
-> other, and they aren't the same kind of wrong.
->
-> False approve is an ineligible campaign shown to the reviewer as clean and confirm-only. That's the
-> catastrophic one — it's the silent, unrecoverable failure. It's denominated over the cases where
-> it's *possible*, not the whole set, because diluting it with cases that were never eligible to be
-> wrongly approved would flatter the system.
->
-> False reject is a genuine campaign pushed toward rejection because thin paperwork got read as a
-> disqualifying fact. That one has a victim who knows about it — and on a platform serving communities
-> that are already over-scrutinised, that carries a cost no accuracy number shows.
->
-> Citation validity is a hundred per cent, and that's a deterministic string check, not a judgement.
-> Every quote is verified to occur literally in its source; anything that fails is deleted before a
-> human sees it.
+> Everything shown uses synthetic data, and the live demo is linked with this application. Mizan weighs evidence; it never issues a ruling. Thank you for watching.
 
-*Point at the disagreement panel.*
+## Final checks
 
-> One disagreement, and I left it in rather than tuning it away. The system sent a clean case to
-> standard review instead of the fast lane, because confidence was seventy-eight against an
-> eighty-five floor. Confidence is the *minimum* across criteria, not the mean — a dossier is only as
-> good as its weakest judgement, and averaging lets nine easy satisfactions bury one shaky blocking
-> call. So it erred cautious. That's the floor doing its job, and it's a different thing from a miss.
-
-*Point at the CI note / model tiering.*
-
-> The gold set runs in CI on every push, in replay mode so it's free and byte-identical, and the build
-> fails on any false approve. Only that one metric gates — a gate that fires on everything gets
-> disabled in week one. Two model calls per case on different tiers: quoting sentences is retrieval,
-> weighing them is judgement, and paying judgement rates for retrieval is how per-case cost quietly
-> triples. Three cents.
-
-## 4:00 – 4:45 · Trade-offs and what I'd do next
-
-> Three trade-offs I'd defend.
->
-> **No auto-approve costs throughput.** I chose that deliberately for the asymmetry I opened with.
-> On a queue where errors are visible and recoverable, I'd argue the other way.
->
-> **The evidence-request draft is a template, not generated text.** Worse prose, better behaviour. A
-> model would write something warmer and would occasionally invent a requirement — and that means a
-> family chasing a document that never existed.
->
-> **Duplicate detection is lexical, not embeddings.** Embeddings would also flag topically similar
-> campaigns, and two different families in Gaza both needing medical funding is not fraud.
->
-> What's missing is the measurement that matters most: inter-rater agreement. Two zakat reviewers,
-> same case, same answer. My gold labels have one author, so right now every number is measuring
-> agreement with one person's reading. Divergence capture in the reviewer UI is the mechanism for
-> building that dataset — every time a reviewer lands somewhere the router didn't recommend, that's a
-> labelled case for the next run. It just needs real reviewers.
-
-## 4:45 – 5:00 · Close
-
-> Everything here is synthetic and I've stated my assumptions on the architecture page. I didn't try
-> to guess how LaunchGood works internally — I built against the policy you publish, because that's
-> the thing that already exists and already doesn't scale.
-
----
-
-## Recording notes
-
-- Have `ANTHROPIC_API_KEY` set before recording so the adversarial control actually runs on camera.
-- Run `npm run record` first so all 24 campaigns are assessed — a queue with 19 "not recorded" rows
-  undercuts the eval story.
-- Zoom the browser to ~110%. The dossier is dense and text needs to be legible on a laptop.
-- The single most persuasive 15 seconds is `lg-1014`: every criterion satisfied, still top of the
-  priority queue, because arithmetic overruled the model. Do not rush it.
+- Say “five recorded cases” before any percentage.
+- Pause on 12.8% versus 12.5%—it is the strongest systems-thinking moment.
+- Let the replay running state remain visible for a beat.
+- Stop after the close; do not add an improvised feature tour.

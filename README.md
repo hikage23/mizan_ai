@@ -83,6 +83,11 @@ npm run eval         # gold-set evaluation, exits non-zero on any false approve
 npm run build
 ```
 
+The `/evals` page ships with a populated snapshot of the five recorded campaigns and a one-click
+replay control. Replay runs the stored model outputs through span verification, deterministic checks,
+scoring and routing again, so a reviewer can see the evaluator execute without an API key or paid
+model call. The other 19 labelled cases remain explicitly excluded until they have recorded output.
+
 **Replay mode.** Fixtures are verbatim responses from a real model run. Replaying them exercises the
 entire downstream pipeline — span verification, aggregation, routing — against real model output
 including its mistakes. The only thing replay removes is the network call and the nondeterminism.
@@ -119,7 +124,8 @@ Two error types, tracked separately and never averaged:
   by ineligible-impossible cases reads far better than the system deserves.
 - **False reject** — a genuine campaign pushed toward rejection. Has a victim who knows about it.
 
-CI runs the gold set in replay mode on every push and fails the build on any false approve.
+GitHub Actions runs lint, the gold-set replay and a production build on every pull request and every
+push to `main`. The eval command exits non-zero on any false approve, making that failure a CI gate.
 
 ## What is missing
 

@@ -1,5 +1,6 @@
-import { corpusStats } from '@/data/corpus';
+import { corpusStats, getCampaign } from '@/data/corpus';
 import { RoutingPill } from '@/components/ui';
+import { EvalReplay, type ReplayCase } from '@/components/EvalReplay';
 import { runEval } from '@/lib/eval';
 import { FIXTURES, FIXTURE_META } from '@/lib/fixtures';
 import { FAST_LANE_CONFIDENCE_FLOOR } from '@/lib/policy';
@@ -14,6 +15,20 @@ export default async function EvalsPage() {
   const pct = (n: number) => `${(n * 100).toFixed(0)}%`;
 
   const misses = run.results.filter((r) => !r.routingCorrect);
+  const replayCases: ReplayCase[] = run.results.map((result) => ({
+    campaignId: result.campaignId,
+    title: getCampaign(result.campaignId)?.title ?? result.campaignId,
+    failureClass: result.failureClass,
+    expectedRouting: result.expected.expectedRouting,
+    actualRouting: result.actual.routing,
+    confidence: result.actual.confidence,
+    routingCorrect: result.routingCorrect,
+    falseApprove: result.falseApprove,
+    falseReject: result.falseReject,
+    citationsValid: result.citationsValid,
+    injectionDetected: result.actual.integrity.injectionDetected,
+    costUsd: result.actual.cost.usd,
+  }));
 
   return (
     <div className="shell">
@@ -26,6 +41,8 @@ export default async function EvalsPage() {
           would make exactly the trade you would not want it to make.
         </p>
       </div>
+
+      <EvalReplay initialCases={replayCases} initialStartedAt={run.startedAt} />
 
       <div className="grid-2" style={{ marginBottom: 16 }}>
         <div className="card" style={{ borderColor: 'var(--oxide-line)', borderWidth: 1.5 }}>

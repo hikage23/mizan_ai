@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { getEntry } from '@/data/corpus';
 import { Adversarial } from '@/components/Adversarial';
 import { DecisionPanel } from '@/components/DecisionPanel';
@@ -33,9 +34,9 @@ export default async function ReviewPage({ params }: { params: Promise<{ id: str
 
   return (
     <div className="shell">
-      <a href="/" className="small dim" style={{ display: 'inline-block', marginBottom: 12 }}>
+      <Link href="/" className="small dim" style={{ display: 'inline-block', marginBottom: 12 }}>
         &larr; Queue
-      </a>
+      </Link>
 
       <div className="row-between wrap" style={{ marginBottom: 6 }}>
         <h1 style={{ margin: 0, maxWidth: '48ch' }}>{campaign.title}</h1>

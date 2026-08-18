@@ -19,7 +19,6 @@ import {
   ASSESSMENT_SYSTEM,
   EXTRACTION_SCHEMA,
   EXTRACTION_SYSTEM,
-  assessmentUser,
   extractionUser,
 } from '../src/lib/prompts';
 

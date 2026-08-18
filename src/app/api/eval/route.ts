@@ -18,6 +18,16 @@ export async function POST(request: Request) {
     only?: string[];
   };
 
+  if (body.live && process.env.MIZAN_ENABLE_LIVE_EVAL !== 'true') {
+    return Response.json(
+      {
+        error: 'live_eval_disabled',
+        detail: 'Public evaluation is replay-only. Set MIZAN_ENABLE_LIVE_EVAL=true to allow paid live runs.',
+      },
+      { status: 403 },
+    );
+  }
+
   const run = await runEval({
     fixtures: body.live ? {} : FIXTURES,
     forceLive: body.live === true,
