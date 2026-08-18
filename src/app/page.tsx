@@ -3,7 +3,7 @@ import { Scale } from '@/components/Scale';
 import { RoutingPill, Tag } from '@/components/ui';
 import { FIXTURE_META, fixtureCount } from '@/lib/fixtures';
 import { hasLiveKey } from '@/lib/llm';
-import { ROUTING_BLURB, ROUTING_LABEL } from '@/lib/routing';
+import { ROUTING_BLURB } from '@/lib/routing';
 import { buildQueue, queueSummary } from '@/lib/queue';
 import type { RoutingDecision } from '@/lib/types';
 

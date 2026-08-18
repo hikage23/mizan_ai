@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import './globals.css';
 import { Nav } from '@/components/Nav';
 import { ScaleMark } from '@/components/Scale';
@@ -15,13 +16,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="topbar">
           <div className="shell topbar-inner">
-            <a href="/" className="row" style={{ gap: 0 }}>
+            <Link href="/" className="row" style={{ gap: 0 }}>
               <span className="wordmark">
                 <ScaleMark size={19} />
                 Mizan
               </span>
               <span className="wordmark-sub">weighs evidence · never rules</span>
-            </a>
+            </Link>
             <Nav />
           </div>
         </header>
