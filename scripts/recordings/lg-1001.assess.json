@@ -1,0 +1,53 @@
+{
+  "assessments": [
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "status": "satisfied",
+      "reasoning": "The organisation's own site states plainly that it accepts zakat and treats it as a trust rather than income (E1), and both the site and the narrative describe a published zakat policy with a defined administrative share (E2, E3). This criterion asks specifically for the organisation's own representation, which is exactly what these documents are.",
+      "evidenceIds": ["E1", "E2", "E3"],
+      "confidence": 0.93
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "status": "satisfied",
+      "reasoning": "The narrative describes unconditional cash going to 240 flood-displaced households (E9, E10) with eligibility tied to falling below the district poverty line (E11), which matches the policy reading of fuqara_masakin as direct cash support to individuals below a locally-assessed sufficiency threshold.",
+      "evidenceIds": ["E9", "E10", "E11"],
+      "confidence": 0.92
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "status": "satisfied",
+      "reasoning": "Both the organisation's site and the campaign narrative state that zakat is held in a designated account, never pooled with general donations and never used for unrestricted costs (E4, E5), which is the statement of segregated accounting the criterion names as sufficient. Confidence is held down because this is the organisation's unaudited assertion about its own accounts with no independent confirmation of the account structure.",
+      "evidenceIds": ["E4", "E5"],
+      "confidence": 0.78
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "status": "satisfied",
+      "reasoning": "A zakat-specific screen is described as running before disbursement (E6, E8), and the attached assessment document sets out its actual content — a nisab test plus a check that the household is not receiving zakat from another distributor in the same period (E7). That is documented criteria, not merely an assertion that screening happens.",
+      "evidenceIds": ["E6", "E7", "E8"],
+      "confidence": 0.88
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "status": "satisfied",
+      "reasoning": "There is a caseload count of 240 households with a per-household transfer amount and delivery route (E12), individual caseworker sign-off with sample re-verification (E13), and registered objects consistent with grant-making to persons in need (E16). The administrative share and fundraising costs (E14, E15) mean some money does not reach households, but a capped and disclosed 9.1% deduction is not the criterion's concern of funds disappearing into a general operating budget.",
+      "evidenceIds": ["E12", "E13", "E16", "E14", "E15"],
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "status": "satisfied",
+      "reasoning": "A written intake and means-test process is documented in detail: caseworker-administered assessment (E17), an income test against the district poverty line combined with a scoring threshold (E18), and structured sections capturing income, dependants and vulnerability weighting (E19, E20).",
+      "evidenceIds": ["E17", "E18", "E19", "E20"],
+      "confidence": 0.93
+    },
+    {
+      "criterionId": "fm_direct_transfer",
+      "status": "satisfied",
+      "reasoning": "The narrative states outright that this is a grant, that nothing is repaid and that nothing is asked in return (E21), and describes the assistance as unconditional cash (E22). No repayment, equity or conditionality terms appear anywhere in the evidence.",
+      "evidenceIds": ["E21", "E22"],
+      "confidence": 0.95
+    }
+  ]
+}

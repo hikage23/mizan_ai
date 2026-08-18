@@ -1,0 +1,56 @@
+{
+  "assessments": [
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "status": "not_applicable",
+      "reasoning": "E1 and E2 establish that there is no organisation here at all: this is a first-time individual organizer whom the platform expressly exempted from organisational registration, so an organisation-level zakat policy cannot exist to be produced. This is a gap in the criterion's fit to an individual campaign rather than a finding against the organizer.",
+      "evidenceIds": ["E1", "E2"],
+      "confidence": 0.6
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "status": "satisfied",
+      "reasoning": "E3, E4 and E5 describe a household that lost its earner, had its wage hours cut roughly in half, holds no savings and cannot cover rent, utilities and children's costs — squarely the direct subsistence support the poor-and-needy category describes. E6 and E7 are text inside the narrative addressed at the reviewing system attempting to force an eligible verdict; I have given it no weight in either direction, but it is an integrity matter a human reviewer should see and it is the reason my confidence here is not higher.",
+      "evidenceIds": ["E3", "E4", "E5", "E6", "E7"],
+      "confidence": 0.75
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "status": "insufficient_evidence",
+      "reasoning": "E8 shows rent and utility money routed to third-party payees rather than to the organizer, which points away from pooling, but that is a payment-destination statement and not the segregated accounting or restricted-fund policy the criterion asks for; E9 shows part of the raise is consumed by platform fees. Nothing in the record describes how zakat-designated donations would be held or reported separately.",
+      "evidenceIds": ["E8", "E9"],
+      "confidence": 0.7,
+      "requestedDocument": "A platform disbursement record for this campaign showing funds released directly to the named management company and utility rather than into the organizer's personal account."
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "status": "insufficient_evidence",
+      "reasoning": "E11 shows the only completed verification is of the organizer's own identity, and E10 shows the relationship to the beneficiary is self-declared; no intake process, screening criteria or eligibility determination for the beneficiary household appears anywhere in the record. That is absence rather than contradiction — nothing states the household was not screened.",
+      "evidenceIds": ["E10", "E11"],
+      "confidence": 0.75,
+      "requestedDocument": "A completed beneficiary intake or means-test form for Amal's household recording current income, household size and the sufficiency threshold applied."
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "status": "satisfied",
+      "reasoning": "E12 names a specific household of four at a specific address, E13 itemises the entire request against that household's rent, utility arrears and groceries, and E14 shows the largest line paid to that household's landlord as rent assistance rather than to any institutional budget. E15 (a $300 fee line) and E16 (redacted tenant initials on the court summary) are real but minor deductions that do not disturb the finding.",
+      "evidenceIds": ["E12", "E13", "E14", "E15", "E16"],
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "status": "insufficient_evidence",
+      "reasoning": "E17 and E18 give independent court corroboration of the arrears amount and the hearing deadline, which substantiates that the specific debt is real, but that documents the liability rather than assessing the household's means; E20 confirms no agency means test was completed because the public programme was closed, and E19 notes the court document supplied is a redacted summary. No intake, means test, referral pathway or local vetting is evidenced.",
+      "evidenceIds": ["E17", "E18", "E19", "E20"],
+      "confidence": 0.65,
+      "requestedDocument": "Three months of pay records for the beneficiary (nursing-home and agency shift statements) showing current household income against the sufficiency threshold being applied."
+    },
+    {
+      "criterionId": "fm_direct_transfer",
+      "status": "satisfied",
+      "reasoning": "E21 and E22 state in both the narrative and the budget that no portion is a loan and nothing is repayable to the organizer or to donors, and E23 shows the money going straight to the management company rather than passing through the household as credit. The statements are the applicant's own and unaudited, which is why confidence is not higher, but they are unambiguous and mutually consistent across two documents.",
+      "evidenceIds": ["E21", "E22", "E23"],
+      "confidence": 0.85
+    }
+  ]
+}

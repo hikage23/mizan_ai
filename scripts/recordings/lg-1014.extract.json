@@ -1,0 +1,174 @@
+{
+  "evidence": [
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The organisation states on its own website that it accepts zakat and holds it in a designated zakat account.",
+      "sourceId": "lg-1014-website",
+      "quote": "Jamuna Learning Trust accepts zakat. We hold it in a designated zakat account with our bank in Melbourne, separate from our general donations and from our DGR-restricted funds.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The campaign narrative repeats that the trust accepts zakat and administers it in a designated account.",
+      "sourceId": "lg-1014-narrative",
+      "quote": "Jamuna Learning Trust accepts zakat and holds it in a designated zakat account with our bank in Melbourne, separate from our general donations and from our DGR-restricted funds.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The organisation states it applies a one-eighth administrative ceiling specifically to zakat received, indicating it administers zakat as zakat.",
+      "sourceId": "lg-1014-website",
+      "quote": "We hold to a ceiling of one eighth of zakat received.",
+      "supportsCriterion": true,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The organisation states zakat is not pooled with other funds and is not spent on unrestricted costs.",
+      "sourceId": "lg-1014-website",
+      "quote": "It is not pooled and it is not used for unrestricted costs.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "Households that fail the zakat screen are paid from general donations and booked separately, implying two distinct funding streams.",
+      "sourceId": "lg-1014-ledger",
+      "quote": "A household failing 2.1 or answering Y to 2.2 is funded from general donations and recorded separately.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "Zakat is released only to households that pass a zakat-specific eligibility screen with stated nisab and duplication tests.",
+      "sourceId": "lg-1014-website",
+      "quote": "Zakat is released only to households that pass a zakat eligibility screen applied in addition to our means test. Assets below nisab, and no zakat received from another distributing body in the same period.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The enrolment pack contains a documented zakat eligibility screen applied before zakat funds are released.",
+      "sourceId": "lg-1014-ledger",
+      "quote": "Applied in addition to Part 1, before zakat funds are released to the household.\n2.1 Household assets below nisab? Y/N. 2.2 Receiving zakat from another distributing body this period? Y/N. 2.3 Screener signature and date.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The narrative describes funding a school year for children drawn from means-tested poor households, consistent with support to the poor and needy.",
+      "sourceId": "lg-1014-narrative",
+      "quote": "Jamuna Learning Trust is funding a full academic year for 620 children from 410 families across fourteen schools in Tahirpur, Bishwamvarpur and Dowarabazar upazilas.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The narrative describes cash stipends to the poorest households to offset lost child income, which is direct support to needy families.",
+      "sourceId": "lg-1014-narrative",
+      "quote": "and for the poorest 140 households we pay a monthly stipend so the family is not choosing between a child's schooling and the income that child could bring in from fishing or day labour.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The registered charitable purpose leads with advancing education rather than poverty relief, so the activity is partly an education programme rather than purely relief of the poor.",
+      "sourceId": "lg-1014-registration",
+      "quote": "Charitable purpose: Advancing education; relieving poverty, distress or disadvantage of individuals or families.",
+      "supportsCriterion": false,
+      "confidence": 0.4
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "Funds are paid per named pupil rather than as a block grant to the schools.",
+      "sourceId": "lg-1014-narrative",
+      "quote": "The money does not go to the schools as a block grant. Fees are paid per pupil, against a named-pupil ledger that the school countersigns each term, and a copy of that ledger comes to us and to the family.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "The named-pupil ledger records individual pupils, amounts and dates, evidencing per-individual disbursement.",
+      "sourceId": "lg-1014-ledger",
+      "quote": "Pupil ref TAH-0112, class 7, school D — fees BDT 4,200 paid 12 January, school countersign present, attendance 91%.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "Stipends are paid directly to a named household member by mobile money rather than to an institution.",
+      "sourceId": "lg-1014-budget",
+      "quote": "BDT 850 per month for twelve months to the 140 lowest-income households, paid by bKash to the mother where there is one in the household.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "Part of the appeal funds the organisation's own head office overhead rather than reaching individual households.",
+      "sourceId": "lg-1014-budget",
+      "quote": "5. Head office rent and utilities — USD 3,800\n   Share of our Melbourne office attributable to this appeal. Classified as administrative cost.",
+      "supportsCriterion": false,
+      "confidence": 0.6
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "The organisation concedes that on a stricter classification its non-beneficiary share of the appeal would be 12.8% rather than 6%.",
+      "sourceId": "lg-1014-budget",
+      "quote": "We note that a stricter reading would treat line 4 as administrative, which would put the figure at 12.8%.",
+      "supportsCriterion": false,
+      "confidence": 0.55
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "claim": "Household selection runs through a means test administered in the family's home.",
+      "sourceId": "lg-1014-narrative",
+      "quote": "Household selection uses our means test, applied at the family's home rather than at the school.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "claim": "The means test has stated quantitative income, land and schooling thresholds.",
+      "sourceId": "lg-1014-narrative",
+      "quote": "To qualify a household must report monthly income below BDT 11,000, must be landless or hold under 0.2 acres of homestead land, and must have a school-aged child either withdrawn from school in the previous eighteen months or at risk of withdrawal on the school's own register.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "claim": "The written intake instrument records income, land holding and a field officer signature with GPS point of visit.",
+      "sourceId": "lg-1014-ledger",
+      "quote": "1.1 Monthly household income, all sources, BDT. Threshold: below BDT 11,000.\n1.2 Land: homestead acres owned, agricultural acres owned or sharecropped. Threshold: landless or under 0.2 acres homestead.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "claim": "Continuing need is re-verified twice a year at every enrolled household with recorded outcomes.",
+      "sourceId": "lg-1014-ledger",
+      "quote": "Visit outcome recorded as continue / suspend / investigate. Round 1 of 2026: 410 households visited, 396 continue, 9 suspend, 5 investigate.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fm_direct_transfer",
+      "claim": "The narrative states the stipends and fee payments are grants with no repayment by the family.",
+      "sourceId": "lg-1014-narrative",
+      "quote": "The stipends and fee payments are grants and no family repays anything.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "fm_direct_transfer",
+      "claim": "Unused fees can be clawed back and reallocated when a child leaves, though the recovery is from the school rather than the household.",
+      "sourceId": "lg-1014-narrative",
+      "quote": "If a child transfers or drops out, the remaining fees for that child are recovered from the school and reallocated, and this happened for nineteen children last year.",
+      "supportsCriterion": false,
+      "confidence": 0.3
+    }
+  ],
+  "inferredCategory": "fuqara_masakin",
+  "inferredCategoryReasoning": "The substance is per-household support — school fees, uniforms and monthly cash stipends — reaching families selected against an income, land and vulnerability means test in rural Sunamganj, which is direct support to individuals below a locally-assessed sufficiency threshold. It is not fi_sabilillah because Bangladesh is not a region where Muslims are a minority."
+}

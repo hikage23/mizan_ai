@@ -1,0 +1,222 @@
+{
+  "evidence": [
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The centre states on its own site that it accepts zakat and administers it as a restricted fund.",
+      "sourceId": "lg-1015-website",
+      "quote": "The centre accepts zakat and administers it as a restricted fund. Zakat received is credited to the hardship fund and is applied only to grants to individuals and families who have been assessed as eligible.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The filed accounts contain a restricted-fund note describing the zakat fund and its permitted application.",
+      "sourceId": "lg-1015-financials",
+      "quote": "The zakat fund is a restricted fund. Zakat received is credited to it and is applied only to hardship grants to individuals and families assessed as eligible.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "Zakat income is separately stated as restricted income in the annual financial statements.",
+      "sourceId": "lg-1015-financials",
+      "quote": "Zakat received (restricted): EUR 88,000",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The accounts state that no zakat has been applied to premises, plant or governance costs in either of the last two years.",
+      "sourceId": "lg-1015-financials",
+      "quote": "No zakat has been applied to premises, plant or governance costs in the current or preceding year. Closing balance EUR 7,000.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "Zakat-funded hardship grants are reported as a separate expenditure line drawn from the restricted zakat fund.",
+      "sourceId": "lg-1015-financials",
+      "quote": "Hardship grants to individuals and families (from restricted zakat fund): EUR 81,000",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The organisation publishes a boundary on what the zakat fund may be spent on, excluding building, plant, staff and running costs.",
+      "sourceId": "lg-1015-website",
+      "quote": "What the zakat fund does not pay for. The zakat fund does not pay for the building, the plant, the staff or the running of the centre. Those come from general collections, room hire and the annual dinner.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "Zakat eligibility is confirmed against nisab and a recorded category before any grant is paid from the zakat fund.",
+      "sourceId": "lg-1015-website",
+      "quote": "Before a grant is paid from the zakat fund the assessors confirm that the applicant's assets are below nisab and record which of the eight categories applies.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "Applications are assessed by two trustees against written means criteria.",
+      "sourceId": "lg-1015-website",
+      "quote": "Two trustees assess the application against our written criteria: household income, savings and assets, rent or mortgage arrears, dependants, and whether statutory support has been claimed.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "Applicants failing the zakat test are diverted to general collections rather than paid from zakat.",
+      "sourceId": "lg-1015-website",
+      "quote": "Applicants who do not meet the zakat test are considered for a grant from general collections instead.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "This particular appeal has no individual recipients, so no beneficiary eligibility screen is applied to it.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "No part of this appeal is passed on to an individual or a household.",
+      "supportsCriterion": false,
+      "confidence": 0.7
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The narrative sets out the Muslim-minority demographic basis for selecting the fi_sabilillah category.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "Muslims are roughly 1.3% of the population of Ireland, there is no other adapted prayer space in this part of Munster, and we understand that category to cover support for Islamic religious life where Muslims are a minority.",
+      "supportsCriterion": true,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The organiser states plainly that the appeal buys plant rather than a programme or a transfer.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "We should be straightforward about what the money buys. It buys plant.",
+      "supportsCriterion": false,
+      "confidence": 0.75
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The organiser concedes a heating system is not an obvious zakat use and offers to rerun the appeal as sadaqah.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "We recognise that a heating system is not an obvious use of zakat and we are content for that to be examined. If the answer is that this is not a zakat matter, we will run the appeal as an ordinary sadaqah appeal and say so on the page.",
+      "supportsCriterion": false,
+      "confidence": 0.6
+    },
+    {
+      "criterionId": "fs_within_stated_reading",
+      "claim": "The centre is the only adapted prayer space in its region, supporting Islamic religious life in a Muslim-minority country.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "It is the only purpose-adapted prayer space within forty kilometres and it has been open since 1997.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "fs_within_stated_reading",
+      "claim": "The hall hosts a volunteer-staffed women's health clinic whose capacity has been cut by the failure.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "The Tuesday women's health clinic, staffed by two volunteer GPs from the Mercy University Hospital, has moved to a room that takes eight people instead of thirty.",
+      "supportsCriterion": true,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "fs_within_stated_reading",
+      "claim": "The regulator records the centre's declared activities as worship, religious education, a hot meal service and a hardship fund.",
+      "sourceId": "lg-1015-registration",
+      "quote": "Activities as declared: Provision and maintenance of a place of worship and community centre; weekend religious education for children; a weekly hot meal service; a hardship fund for individuals and families in the Cork area; funeral and burial support.",
+      "supportsCriterion": true,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "fs_within_stated_reading",
+      "claim": "The expenditure itself is building services plant rather than poverty relief, health provision or religious programming.",
+      "sourceId": "lg-1015-budget",
+      "quote": "1. Two rooftop air handling units, supply and install — USD 48,000",
+      "supportsCriterion": false,
+      "confidence": 0.6
+    },
+    {
+      "criterionId": "fs_beneficiary_reach",
+      "claim": "Around 1,100 people use the hall for Friday prayer each week.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "About 1,100 people pray here on a Friday, drawn from the city, from Ballincollig and from the food-processing towns out towards Midleton.",
+      "supportsCriterion": true,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "fs_beneficiary_reach",
+      "claim": "A madrasa serving 210 children has been suspended because of the failure the appeal would fix.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "We have suspended the Saturday and Sunday madrasa, which 210 children attend, because we cannot ask them to sit still for two hours in that.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "fs_beneficiary_reach",
+      "claim": "A hot meal service serving 61 people a week runs from the same hall and is currently suspended.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "The Thursday evening hot meal service, which fed 61 people the week before the unit failed, runs out of the same hall and is suspended.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "fs_beneficiary_reach",
+      "claim": "No part of the appeal reaches an individual or household; the benefit is to the building.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "No part of this appeal is passed on to an individual or a household.",
+      "supportsCriterion": false,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fs_beneficiary_reach",
+      "claim": "The budget confirms that none of the expenditure is disbursed to individuals.",
+      "sourceId": "lg-1015-budget",
+      "quote": "None of this expenditure is disbursed to individuals.",
+      "supportsCriterion": false,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fs_not_capital_retention",
+      "claim": "The new system becomes a capitalised fixed asset of the centre and stays with the building.",
+      "sourceId": "lg-1015-narrative",
+      "quote": "The new system becomes part of the centre's fixed assets, will be capitalised in our accounts and depreciated over fifteen years, and it stays with the building.",
+      "supportsCriterion": false,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "fs_not_capital_retention",
+      "claim": "The budget states that items 1 to 4, being the bulk of the appeal, will be capitalised as tangible fixed assets.",
+      "sourceId": "lg-1015-budget",
+      "quote": "Asset treatment: all of items 1 to 4 will be capitalised as tangible fixed assets of the centre and depreciated over fifteen years.",
+      "supportsCriterion": false,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "fs_not_capital_retention",
+      "claim": "The budget is titled and framed as a capital works budget rather than programme delivery.",
+      "sourceId": "lg-1015-budget",
+      "quote": "LEE VALLEY ISLAMIC CENTRE — HVAC REPLACEMENT, CAPITAL WORKS BUDGET",
+      "supportsCriterion": false,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fs_not_capital_retention",
+      "claim": "The organisation's own published rule is that zakat does not pay for the building or the plant.",
+      "sourceId": "lg-1015-website",
+      "quote": "The zakat fund does not pay for the building, the plant, the staff or the running of the centre.",
+      "supportsCriterion": false,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fs_not_capital_retention",
+      "claim": "Plant of this kind is recorded in the accounts as a depreciated tangible fixed asset of the centre.",
+      "sourceId": "lg-1015-financials",
+      "quote": "Plant and machinery comprises the heating and ventilation installation, kitchen equipment and the funeral washing facility. Plant is capitalised and depreciated over fifteen years on a straight-line basis.",
+      "supportsCriterion": false,
+      "confidence": 0.85
+    }
+  ],
+  "inferredCategory": "fi_sabilillah",
+  "inferredCategoryReasoning": "The activity is restoring a mosque and community hall in Cork so that prayer, a children's madrasa, a hot meal service and a volunteer health clinic can resume, in a country where Muslims are about 1.3% of the population, which is the fi_sabilillah reading of support for Islamic religious life in a Muslim-minority region. No other category fits, since the spend is on building plant rather than transfers to individuals, debtors or travellers."
+}

@@ -1,0 +1,10 @@
+{
+  "recordedAt": "2026-08-17T23:45:19.141Z",
+  "extractionModel": "claude-haiku-4-5",
+  "adjudicationModel": "claude-sonnet-4-5",
+  "campaigns": 24,
+  "calls": 9,
+  "estimatedTotalUsd": 0.1736,
+  "estimatedPerCampaignUsd": 0.0072,
+  "tokenCountMethod": "approximate, 3.6 chars per token"
+}

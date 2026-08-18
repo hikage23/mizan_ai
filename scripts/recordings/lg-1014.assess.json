@@ -1,0 +1,53 @@
+{
+  "assessments": [
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "status": "satisfied",
+      "reasoning": "The organisation's own site states plainly that it accepts zakat and holds it in a designated account (E1), the narrative repeats it (E2), and it describes administering zakat against a one-eighth ceiling on zakat received (E3), which is the kind of zakat-specific policy the criterion asks for. Confidence is held below the ceiling because every item is the organisation's own unaudited representation about itself.",
+      "evidenceIds": ["E1", "E2", "E3"],
+      "confidence": 0.88
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "status": "satisfied",
+      "reasoning": "The narrative describes fees, materials and monthly cash stipends reaching means-tested poor households in the haor basin (E8, E9), which is in-kind and cash support to people below a locally-assessed sufficiency threshold and so matches fuqara_masakin. E10 shows the registered purpose leads with advancing education, but a charity may pursue relief of poverty through schooling costs and that does not displace the fit.",
+      "evidenceIds": ["E8", "E9", "E10"],
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "status": "satisfied",
+      "reasoning": "The organisation states zakat sits in a designated account, is not pooled and is not spent on unrestricted costs (E1, E4), and the enrolment pack shows the operational consequence — households failing the zakat screen are paid from general donations and recorded separately (E5). The criterion is satisfied by a statement of segregated accounting, though the statement is self-reported and no bank or audit record corroborates it.",
+      "evidenceIds": ["E4", "E5", "E1"],
+      "confidence": 0.78
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "status": "satisfied",
+      "reasoning": "A documented zakat eligibility screen with nisab and duplicate-receipt tests is applied before zakat is released, described on the site (E6) and reproduced as Part 2 of the enrolment instrument with a screener signature line (E7). That is a documented screening process rather than a bare assertion that screening happens.",
+      "evidenceIds": ["E6", "E7"],
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "status": "satisfied",
+      "reasoning": "Fees are paid per named pupil against a countersigned ledger rather than as a block grant (E11, E12) and stipends go by mobile money to a named household member (E13), so the money is traceable to identified households. E14 and E15 show head office rent and a contested field-staff classification consuming between 6% and 12.8% of the appeal, which is ordinary overhead alongside beneficiary payments rather than funding of a general operating budget.",
+      "evidenceIds": ["E11", "E12", "E13", "E14", "E15"],
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "status": "satisfied",
+      "reasoning": "There is a written means test with quantitative income, land and schooling thresholds applied in the household rather than at the school (E16, E17, E18), and continuing need is re-verified twice yearly with recorded continue/suspend/investigate outcomes for all 410 households (E19). This is documented local vetting, not an assurance that vetting occurs.",
+      "evidenceIds": ["E16", "E17", "E18", "E19"],
+      "confidence": 0.92
+    },
+    {
+      "criterionId": "fm_direct_transfer",
+      "status": "satisfied",
+      "reasoning": "The narrative states outright that stipends and fee payments are grants and that no family repays anything (E20), and nothing in the budget describes a loan, equity or repayment term. E21 describes recovery of unspent fees from the school when a pupil leaves, which is a clawback against the institution rather than a repayment obligation on the household, so it does not cut against the criterion.",
+      "evidenceIds": ["E20", "E21"],
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "evidence": [
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The organisation's zakat page states it accepts zakat and accounts for it separately.",
+      "sourceId": "lg-1024-zakat-page",
+      "quote": "We accept zakat and we account for it separately.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The campaign narrative states the organisation accepts zakat and keeps it separate.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "Zakat. We accept zakat and we keep it separate.",
+      "supportsCriterion": true,
+      "confidence": 0.93
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The organisation publishes an annual zakat report of receipts, spending and carry-over.",
+      "sourceId": "lg-1024-zakat-page",
+      "quote": "Annual zakat report. Every March we publish what we received in zakat, what we spent it on, and what carried over.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The zakat page sets out a restricted use policy limiting zakat to relief goods and excluding overheads.",
+      "sourceId": "lg-1024-zakat-page",
+      "quote": "Restricted use. Zakat is spent on food, clothing, footwear, shelter materials and medical supplies. It is not spent on fuel, vehicle costs, coordinator salary, insurance or administration, all of which are funded from our unrestricted income and from two Austrian municipal grants.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The organisation states it holds itself to a one-eighth administrative ceiling and reports its actual share.",
+      "sourceId": "lg-1024-zakat-page",
+      "quote": "Our combined administration and fundraising expense was 9.4 per cent in 2025 and is budgeted at 7.0 per cent against the current campaign.",
+      "supportsCriterion": true,
+      "confidence": 0.78
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "Zakat donations go into a dedicated bank sub-account, are not commingled, and are reconciled monthly against a zakat ledger.",
+      "sourceId": "lg-1024-zakat-page",
+      "quote": "Zakat donations are received into a dedicated sub-account at our bank in Vienna. They are not commingled with our general funds and they are reconciled monthly against the zakat ledger.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The narrative repeats that zakat sits in a separate sub-account with an annual public zakat report.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "Zakat donations are held in a separate sub-account at our bank in Vienna and we publish an annual zakat report showing what was received and what it was spent on.",
+      "supportsCriterion": true,
+      "confidence": 0.92
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The narrative restricts zakat spending to relief goods and rules out fuel, salary and administration.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "Zakat is spent on food, clothing and medical supplies only — never on fuel, never on the coordinator, never on administration.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "Separate zakat receipt, disbursement and carry-forward figures are published for 2025.",
+      "sourceId": "lg-1024-zakat-page",
+      "quote": "The 2025 report is linked here: received EUR 74,180, disbursed EUR 71,900, carried forward EUR 2,280.",
+      "supportsCriterion": true,
+      "confidence": 0.88
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The campaign budget marks individual lines as zakat-eligible, showing zakat is tracked against specific costs.",
+      "sourceId": "lg-1024-budget",
+      "quote": "900 sleeping bags at USD 18, 900 mats at USD 6, and a clothing allocation of USD 2.40 per person. USD 24,000. Zakat-eligible line.",
+      "supportsCriterion": true,
+      "confidence": 0.88
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The vehicle line is explicitly excluded from zakat funding in the budget.",
+      "sourceId": "lg-1024-budget",
+      "quote": "Vehicle. Fuel at 1,100 km a month, third-party insurance, two services, and one set of winter tyres. USD 5,200. Funded from unrestricted income, not from zakat.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The coordinator salary line is funded from unrestricted income rather than zakat.",
+      "sourceId": "lg-1024-budget",
+      "quote": "Coordinator, 0.5 FTE for three months, gross including Austrian employer contributions. USD 3,200. Funded from unrestricted income.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The administration and payment processing line is the only budget line with no stated funding source, so it is not shown to be excluded from zakat.",
+      "sourceId": "lg-1024-budget",
+      "quote": "Administration and payment processing. USD 1,300.",
+      "supportsCriterion": false,
+      "confidence": 0.6
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The organisation states it does not ask recipients about status and keeps no names, so no individual eligibility check is performed.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "We do not ask anyone their legal status and we do not record names.",
+      "supportsCriterion": false,
+      "confidence": 0.92
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The local partner confirms distribution is open to anyone present with no documents or questions asked.",
+      "sourceId": "lg-1024-partner",
+      "quote": "Distribution is open to anyone present and no one is asked for documents, status or nationality.",
+      "supportsCriterion": false,
+      "confidence": 0.92
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "No beneficiary register exists; only headcounts and item counts are recorded, so eligibility cannot be evidenced per recipient.",
+      "sourceId": "lg-1024-partner",
+      "quote": "Karwan's volunteers keep no register of names; the only figures recorded are nightly headcounts and item counts, which are shared with us weekly.",
+      "supportsCriterion": false,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The organiser applies the category to the whole distribution population as a class rather than screening individuals.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "That describes almost everyone at our distribution.",
+      "supportsCriterion": false,
+      "confidence": 0.7
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The campaign runs evening relief distributions in a border transit corridor.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "Karwan Transit Aid runs two evening distribution points north of Subotica, in Vojvodina, about ten kilometres from the Hungarian border.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The recipient population turns over on a median 47-day stay, consistent with people mid-journey rather than a settled community.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "Over ninety days we expect to reach around 900 individuals, because the population turns over — the median stay we record in the corridor is 47 days, and people arrive and leave in both directions.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The organiser's stated reasoning is that recipients are people away from home and cut off from their means.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "The classical description is a person who is away from home and cut off from their means, who may be a person of substance where they came from and is destitute where they are standing.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The registered statutory purpose is humanitarian relief to persons in transit and displaced persons, matching the described activity.",
+      "sourceId": "lg-1024-registration",
+      "quote": "Statutory purpose, section 2 of the statutes: the non-profit provision of humanitarian relief, in particular food, clothing, shelter materials and basic medical supplies, to persons in transit and to displaced persons in the Republic of Austria and abroad.",
+      "supportsCriterion": true,
+      "confidence": 0.88
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "Relief goods are transferred outright to recipients with nothing loaned or exchanged.",
+      "sourceId": "lg-1024-partner",
+      "quote": "Materials are handed over outright and nothing is loaned, sold or exchanged.",
+      "supportsCriterion": true,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "One of the two sites serves a group that has been living there for about two years, which cuts against describing the recipients as transiently stranded travellers.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "The other is a lay-by on the road toward Horgos where a group has been sleeping in the tree line for most of two years.",
+      "supportsCriterion": false,
+      "confidence": 0.75
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The organiser concedes its reading of the selected category is not universally accepted and that some platforms will not verify it.",
+      "sourceId": "lg-1024-narrative",
+      "quote": "We are aware that this reading is not universally accepted and that some platforms will not verify it.",
+      "supportsCriterion": false,
+      "confidence": 0.78
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The zakat page repeats that the organisation's mapping of people in transit onto the stranded-traveller category is contested.",
+      "sourceId": "lg-1024-zakat-page",
+      "quote": "We fundraise for people in transit and we designate that as support to the stranded traveller. We know this reading is contested.",
+      "supportsCriterion": false,
+      "confidence": 0.78
+    }
+  ],
+  "inferredCategory": "ibn_sabil",
+  "inferredCategoryReasoning": "The campaign supplies bedding, hot food, clothing and basic medical care to people moving through a border corridor with a recorded median stay of 47 days, who are described as destitute where they stand though not necessarily poor at origin — that condition is the stranded traveller. The substance also reads as ordinary in-kind relief to the destitute, since aid is given to whoever is present with no assessment of means, so the reading is not clean."
+}

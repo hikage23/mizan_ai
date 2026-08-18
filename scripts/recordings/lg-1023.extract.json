@@ -1,0 +1,206 @@
+{
+  "evidence": [
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The organisation's own zakat page states it accepts zakat and holds it as a trust.",
+      "sourceId": "lg-1023-zakat-page",
+      "quote": "We accept zakat and we hold it as a trust.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The campaign narrative states the fund accepts zakat and treats it as a restricted trust.",
+      "sourceId": "lg-1023-narrative",
+      "quote": "On zakat. We accept zakat and we treat it as a restricted trust.",
+      "supportsCriterion": true,
+      "confidence": 0.93
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The audited financial statements record a separate restricted fund for donor-designated zakat, showing zakat is administered as such.",
+      "sourceId": "lg-1023-financials",
+      "quote": "The Fund maintains a separate restricted fund for contributions designated by the donor as zakat.",
+      "supportsCriterion": true,
+      "confidence": 0.92
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The zakat page restricts zakat spending to debt portfolio purchases and excludes overhead.",
+      "sourceId": "lg-1023-zakat-page",
+      "quote": "What zakat pays for. Zakat is applied to the acquisition of debt portfolios only. It does not pay salaries, mailing, legal fees or overhead.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The organisation states its administrative and fundraising share is held inside the one-eighth ceiling.",
+      "sourceId": "lg-1023-zakat-page",
+      "quote": "Our combined management and fundraising expense was 8.2 per cent of total expenditure in the 2025 audited year, and is budgeted at 6.4 per cent against this campaign.",
+      "supportsCriterion": true,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "Zakat contributions are held in a restricted fund with a distinct ledger and a separate deposit account.",
+      "sourceId": "lg-1023-zakat-page",
+      "quote": "Segregation. Zakat contributions are held in a restricted fund with its own ledger and a separate deposit account.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The organisation states zakat is never pooled with unrestricted giving and is reported separately each year.",
+      "sourceId": "lg-1023-zakat-page",
+      "quote": "They are never pooled with unrestricted giving and they are reported as a separate line in our audited financial statements every year.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The audited notes confirm zakat is recorded in a distinct ledger and a separate deposit account and released only against portfolio acquisition.",
+      "sourceId": "lg-1023-financials",
+      "quote": "Zakat contributions are recorded in a distinct ledger, held in a separate deposit account, and released only against portfolio acquisition costs.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The auditor's notes state no zakat was applied to management, general or fundraising expense in the period.",
+      "sourceId": "lg-1023-financials",
+      "quote": "No zakat contribution was applied to management, general or fundraising expense during the period.",
+      "supportsCriterion": true,
+      "confidence": 0.93
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The financial statements report zakat receipts and releases as separate figures.",
+      "sourceId": "lg-1023-financials",
+      "quote": "Zakat contributions received in the year: USD 611,400. Released to portfolio acquisition: USD 583,900.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The narrative repeats that zakat sits in a restricted fund with its own ledger and separate reporting.",
+      "sourceId": "lg-1023-narrative",
+      "quote": "Zakat contributions are held in a restricted fund with its own ledger and are reported separately in our audited financial statements.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "A written screening specification defines pass/fail tests applied to every account before purchase.",
+      "sourceId": "lg-1023-screening",
+      "quote": "An account qualifying under either Test A or Test B is eligible for purchase. An account failing both is struck from the tape before pricing and is not acquired.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The zakat page describes a documented pre-purchase screen on income and debt burden with a retained screening file.",
+      "sourceId": "lg-1023-zakat-page",
+      "quote": "Eligibility screening. Every account inside a portfolio we buy is screened before purchase against household income at or below four hundred per cent of the federal poverty guideline, or medical debt at or above five per cent of annual household income.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The screening file for any portfolio can be produced on request, indicating the screen is documented and auditable.",
+      "sourceId": "lg-1023-zakat-page",
+      "quote": "We can produce the screening file for any portfolio on request.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The screening spec excludes self-dealing by barring accounts belonging to employees or board members of the fund or its servicer.",
+      "sourceId": "lg-1023-screening",
+      "quote": "accounts belonging to any employee or board member of the Fund or of Meridian.",
+      "supportsCriterion": true,
+      "confidence": 0.75
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "No individual beneficiary is screened or asked to establish need, because the filter is applied to the portfolio rather than to the household.",
+      "sourceId": "lg-1023-narrative",
+      "quote": "There is no application, no interview and no means test the household has to sit through, because the screening happened upstream in the portfolio and the household is never asked to prove anything about itself.",
+      "supportsCriterion": false,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The organisation disclaims choosing which households benefit, so there is no per-beneficiary determination.",
+      "sourceId": "lg-1023-narrative",
+      "quote": "We do not choose which households benefit; the filter does.",
+      "supportsCriterion": false,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "An account can qualify on debt burden alone, so a household with no income limit at all can be a beneficiary.",
+      "sourceId": "lg-1023-screening",
+      "quote": "Test B — Debt burden. Total medical debt at or above 5% of estimated annual household income.",
+      "supportsCriterion": false,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "Income is estimated from a statistical model rather than verified, and the threshold used is four times the federal poverty guideline rather than a poverty or sufficiency line.",
+      "sourceId": "lg-1023-screening",
+      "quote": "Test A — Income. Estimated household income at or below 400% of the current federal poverty guideline for the household size on file, derived from the originating provider's charity care application where present, and otherwise from a census-tract and credit-attribute model with a documented accuracy band.",
+      "supportsCriterion": false,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The campaign buys and permanently extinguishes unpaid medical debt with no repayment by the household.",
+      "sourceId": "lg-1023-narrative",
+      "quote": "Maysarah Medical Debt Relief Fund buys unpaid medical debt on the secondary market and extinguishes it. We do not collect on it, we do not resell it, and the household never repays anything.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The organiser explains it selected the debtor category because beneficiaries are households under a medically-incurred debt they cannot discharge.",
+      "sourceId": "lg-1023-narrative",
+      "quote": "We selected the debtor category because that is what this is: households under a debt they cannot discharge, where the debt was incurred for medical necessity and not in disobedience.",
+      "supportsCriterion": true,
+      "confidence": 0.92
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The IRS determination letter states the organisation's purpose is extinguishing medical debt of low-income households without recourse to the debtor, matching the described activity.",
+      "sourceId": "lg-1023-registration",
+      "quote": "Purpose as stated in your application: to relieve the poor and distressed by acquiring and permanently extinguishing medical debt obligations of low-income households, without recourse to the debtor.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "Audited figures show debt was in fact acquired and extinguished at scale with nothing collected from households.",
+      "sourceId": "lg-1023-financials",
+      "quote": "Face value of medical debt acquired and permanently extinguished during the year: USD 291.4 million, benefiting 214,880 households across three states. No amount was collected from any household.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The organiser itself acknowledges that the category it selected is one some platforms decline to verify.",
+      "sourceId": "lg-1023-narrative",
+      "quote": "We recognise this is a category some platforms decline to verify, and we would rather say that up front than have it discovered.",
+      "supportsCriterion": false,
+      "confidence": 0.7
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The zakat page concedes that whether debt relief is a verifiable zakat category is contested between platforms.",
+      "sourceId": "lg-1023-zakat-page",
+      "quote": "The category question. We are aware that platforms differ on whether debt relief is a verifiable zakat category.",
+      "supportsCriterion": false,
+      "confidence": 0.7
+    }
+  ],
+  "inferredCategory": "gharimin",
+  "inferredCategoryReasoning": "The campaign's substance is acquiring and permanently cancelling the medical debts of indebted households, with no repayment and no residual obligation, which is relief of people burdened by debt rather than a cash or in-kind transfer to the poor. The debts are described as incurred for medical necessity and not in disobedience, which is the standard qualifier for the debtor category."
+}

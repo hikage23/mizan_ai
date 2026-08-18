@@ -1,0 +1,182 @@
+{
+  "evidence": [
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The organisation states on its own site that it accepts zakat and holds it as a trust rather than as income.",
+      "sourceId": "lg-1001-website",
+      "quote": "We accept zakat and we treat it as a trust, not as income.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The narrative refers to the organisation's own published zakat policy governing the administrative share it takes from zakat.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "We do not use zakat funds for our own operating costs beyond the administrative share permitted, which we cap at one eighth in line with our published zakat policy.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_org_accepts_zakat",
+      "claim": "The organisation publishes a stated administrative share it takes from zakat received and reports its actual figure for the year.",
+      "sourceId": "lg-1001-website",
+      "quote": "Administrative share. We take no more than one eighth of zakat received to cover the cost of collecting and distributing it, consistent with the majority position. In the 2025-26 year our actual figure was 9.1%.",
+      "supportsCriterion": true,
+      "confidence": 0.8
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The organisation states zakat is held in a designated account and never pooled with general donations or used for unrestricted costs.",
+      "sourceId": "lg-1001-website",
+      "quote": "Every pound of zakat you give is held in a designated zakat account. It is never pooled with general donations and never used to cover unrestricted costs.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_funds_segregated",
+      "claim": "The campaign narrative repeats that all zakat funds sit in a designated account separate from general donations.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "Amanah Relief Trust holds all zakat funds in a designated account separate from general donations.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The organisation states that every household is screened against the categories of eligible zakat recipients before any zakat is disbursed.",
+      "sourceId": "lg-1001-website",
+      "quote": "Eligibility screening. Before any zakat is disbursed, the receiving household is screened against the categories of eligible recipients.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The attached assessment document describes a separate zakat screen testing nisab and non-duplication with other zakat distributors.",
+      "sourceId": "lg-1001-assessment",
+      "quote": "Zakat screen. Applied separately. Confirms the household holds assets below nisab and is not in receipt of zakat from another distributing body in the same period.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_beneficiary_eligibility_screen",
+      "claim": "The narrative states zakat goes only to households confirmed eligible under a zakat screening applied on top of the poverty assessment.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "Zakat is disbursed only to households confirmed eligible under our zakat screening, which is applied in addition to the poverty assessment.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The campaign is unconditional cash assistance to 240 households displaced by flooding, which is direct support to poor individuals.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "We are raising unconditional cash assistance for 240 of those households through the winter.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "The beneficiary population is households displaced from their villages by flooding along the Indus.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "Flooding across northern Sindh in June displaced roughly 11,000 households from villages along the Indus.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "u_narrative_matches_claim",
+      "claim": "Eligibility is tied to falling below the district poverty line, matching the sufficiency-threshold framing of the selected category.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "To qualify, a household must have lost its primary dwelling or its main income source, and must fall below the district poverty line as measured by our means test.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "A fixed cash amount goes to each individual household in three monthly transfers through a named local partner.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "Each household receives PKR 98,000 across three monthly transfers, delivered by our local partner Sindh Rural Support Network.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "Households are individually selected and signed off by named caseworkers, with a sample re-verified.",
+      "sourceId": "lg-1001-assessment",
+      "quote": "Caseworker signature and date required. Ten per cent of completed assessments are re-verified by a second caseworker.",
+      "supportsCriterion": true,
+      "confidence": 0.85
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "The organisation concedes it retains up to one eighth of zakat received to cover its own collection and distribution costs, so not all zakat reaches households.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "We do not use zakat funds for our own operating costs beyond the administrative share permitted, which we cap at one eighth",
+      "supportsCriterion": false,
+      "confidence": 0.7
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "The organisation's filed accounts show a portion of total expenditure going to fundraising rather than charitable activity.",
+      "sourceId": "lg-1001-registration",
+      "quote": "Total expenditure GBP 3.9m, of which charitable activities GBP 3.5m and raising funds GBP 0.3m.",
+      "supportsCriterion": false,
+      "confidence": 0.45
+    },
+    {
+      "criterionId": "fm_individual_beneficiaries",
+      "claim": "The charity's registered objects are relief of poverty among persons in need through grants, goods and services.",
+      "sourceId": "lg-1001-registration",
+      "quote": "Objects: The relief of poverty and financial hardship among persons in need, in the United Kingdom and overseas, in particular through the provision of grants, goods and services.",
+      "supportsCriterion": true,
+      "confidence": 0.75
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "claim": "Households are selected by partner caseworkers using a standard intake assessment.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "Households are selected by SRSN caseworkers using our standard intake assessment.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "claim": "The assessment applies a numeric scoring threshold combined with an income test against the district poverty line.",
+      "sourceId": "lg-1001-assessment",
+      "quote": "Scoring. Households scoring 4 or above and reporting monthly income below PKR 32,000 (district poverty line) are eligible.",
+      "supportsCriterion": true,
+      "confidence": 0.95
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "claim": "The intake form captures displacement status, income, dependants and lost productive assets.",
+      "sourceId": "lg-1001-assessment",
+      "quote": "Section 2 — Income. Primary earner occupation before displacement. Current monthly household income (PKR). Number of dependants.",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fm_need_assessment",
+      "claim": "A documented vulnerability weighting prioritises widow-headed households, disability and young children.",
+      "sourceId": "lg-1001-assessment",
+      "quote": "Section 4 — Vulnerability weighting. Widow-headed household (+2). Household member with disability (+2). Children under 5 (+1 each, max +3). No adult male earner (+1).",
+      "supportsCriterion": true,
+      "confidence": 0.9
+    },
+    {
+      "criterionId": "fm_direct_transfer",
+      "claim": "The narrative states outright that the transfer is a grant with nothing repaid and nothing asked in return.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "This is a grant. Nothing is repaid, and no household is asked for anything in return.",
+      "supportsCriterion": true,
+      "confidence": 0.98
+    },
+    {
+      "criterionId": "fm_direct_transfer",
+      "claim": "The assistance is described as unconditional cash rather than in-kind or conditional support.",
+      "sourceId": "lg-1001-narrative",
+      "quote": "Cash rather than in-kind because the district markets are functioning and families consistently tell us they need different things — some school fees, some medicine, some replacing a lost livestock animal.",
+      "supportsCriterion": true,
+      "confidence": 0.8
+    }
+  ],
+  "inferredCategory": "fuqara_masakin",
+  "inferredCategoryReasoning": "The campaign is unconditional cash assistance to 240 flood-displaced households selected against a district poverty line and a means test, which is direct support reaching individuals below a locally-assessed sufficiency threshold. That is the substance of fuqara_masakin rather than any of the other categories."
+}

@@ -1,0 +1,383 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Mizan — visual system, v2.
+
+   Grounded in the thing the product actually is: a ledger where a person
+   weighs evidence. Mizan (ميزان) is Arabic for "the scale" — so the scale is
+   not a logo, it's the confidence indicator (see components/Scale.tsx); the
+   palette is patina-green and rust-oxide, the colours an old bronze scale
+   actually weathers to, not a decorative accent chosen for vibe. Paper is a
+   cool limestone, not the warm cream+serif+gold combination that has become
+   the default "AI-generated" look — deliberately shifted off that cluster.
+
+   Three type families with distinct jobs: Newsreader (display, reading
+   passages — a book face, because this is a document-reading tool) / IBM
+   Plex Sans (interface chrome) / IBM Plex Mono (every number, ID and amount —
+   a ledger aligns its figures).
+--------------------------------------------------------------------------- */
+
+@import "@fontsource/newsreader/400.css";
+@import "@fontsource/newsreader/500.css";
+@import "@fontsource/newsreader/600.css";
+@import "@fontsource/newsreader/500-italic.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+:root {
+  /* paper — cool limestone, not warm cream */
+  --paper:      #ECEEE4;
+  --surface:    #FFFFFF;
+  --surface-2:  #E2E5D6;
+  --ink:        #151A1C;
+  --ink-2:      #3B4443;
+  --muted:      #626E69;
+  --faint:      #8A968E;
+  --line:       #D5D9C9;
+  --line-soft:  #E1E4D5;
+
+  /* verdigris — patina bronze. Primary accent AND "good", deliberately: the
+     colour an aged scale weathers to doubles as the semantic for a case that
+     weighs out clean. Decoration and meaning are the same signal. */
+  --verdigris:      #2F6B5E;
+  --verdigris-soft: #DEEAE3;
+  --verdigris-line: #BFD6CB;
+
+  /* oxide — corroded iron. "Bad" / the catastrophic error. */
+  --oxide:      #A8452E;
+  --oxide-soft: #F5E2DA;
+  --oxide-line: #E4BCAC;
+
+  /* ochre — old brass under patina. "Warn". */
+  --ochre:      #8C6A22;
+  --ochre-soft: #F0E7D0;
+  --ochre-line: #DFCB9C;
+
+  /* slate — ledger ink-blue. Informational, neutral-cool. */
+  --slate:      #3E5A68;
+  --slate-soft: #E1E9EC;
+  --slate-line: #BCD0D8;
+
+  --font-display: 'Newsreader', ui-serif, Georgia, serif;
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  color-scheme: light;
+
+  /* legacy aliases — semantic names used in inline styles throughout the app.
+     Kept as a compatibility layer onto the v2 palette rather than hunting down
+     every inline style; the names read fine either way ("good"/"bad"/"warn"). */
+  --good: var(--verdigris);
+  --bad: var(--oxide);
+  --warn: var(--ochre);
+  --info: var(--slate);
+  --sans: var(--font-sans);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--verdigris-soft); color: var(--ink); }
+
+/* --- focus & interactive states (craft R11 / accessibility) --------------- */
+
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--verdigris);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+a:focus-visible, .qrow:focus-visible { outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* --- layout ----------------------------------------------------------------*/
+
+.shell { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+.shell-narrow { max-width: 780px; margin: 0 auto; padding: 0 28px; }
+
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: rgba(236, 238, 228, 0.9);
+  backdrop-filter: blur(8px);
+  position: sticky; top: 0; z-index: 20;
+}
+.topbar-inner { display: flex; align-items: center; gap: 26px; height: 60px; }
+
+.wordmark { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-display); font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+.wordmark-sub {
+  font-size: 10.5px; color: var(--faint); letter-spacing: 0.06em;
+  text-transform: uppercase; margin-left: 8px; font-family: var(--font-sans); font-weight: 500;
+}
+
+.nav { display: flex; gap: 4px; margin-left: auto; font-size: 13.5px; }
+.nav a {
+  color: var(--muted); padding: 7px 11px; border-radius: 6px;
+  transition: color 150ms var(--ease-out), background-color 150ms var(--ease-out);
+}
+.nav a:hover { color: var(--ink); background: var(--surface-2); }
+.nav a.on { color: var(--ink); font-weight: 600; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+
+/* --- type -------------------------------------------------------------------
+   Hierarchy leans on family + weight + colour first, size second (craft R9):
+   the display face itself signals "this is a heading", not just larger px. */
+
+h1 {
+  font-family: var(--font-display); font-size: 32px; line-height: 1.16;
+  letter-spacing: -0.01em; font-weight: 600; margin: 0 0 10px;
+  text-wrap: balance;
+}
+h2 {
+  font-family: var(--font-display); font-size: 19px; line-height: 1.3;
+  font-weight: 600; margin: 0 0 10px; letter-spacing: -0.003em;
+}
+h3 { font-size: 13.5px; font-weight: 600; margin: 0 0 6px; font-family: var(--font-sans); }
+p  { margin: 0 0 12px; }
+
+.lede {
+  font-family: var(--font-display); font-size: 18px; color: var(--ink-2);
+  max-width: 62ch; line-height: 1.55; font-weight: 400;
+}
+.dim { color: var(--muted); }
+.faint { color: var(--faint); }
+.small { font-size: 13px; }
+.tiny { font-size: 11.5px; }
+.mono { font-family: var(--font-mono); font-size: 12px; }
+.prose { max-width: 72ch; }
+.prose p { color: var(--ink-2); }
+em { font-family: var(--font-display); font-style: italic; }
+
+.eyebrow {
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--verdigris); font-weight: 600; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.eyebrow::before { content: ''; width: 16px; height: 1.5px; background: var(--verdigris); flex: none; }
+
+/* all figures — money, percentages, ids, counts — read as ledger entries */
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+/* --- surfaces --------------------------------------------------------------
+   Not every block is a bordered box (craft R4). .card is for content that
+   genuinely groups; .plain is for content that should sit directly on the
+   page and breathe. */
+
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 18px 20px;
+  transition: border-color 150ms var(--ease-out);
+}
+.card + .card { margin-top: 14px; }
+.card-tight { padding: 14px 16px; }
+.card-quiet { background: transparent; border-color: transparent; padding: 0; }
+.rule { height: 1px; background: var(--line); border: 0; margin: 30px 0; }
+.rule-heavy { height: 1px; background: var(--ink-2); border: 0; margin: 34px 0; opacity: 0.15; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.split { display: grid; grid-template-columns: minmax(0,1.55fr) minmax(0,1fr); gap: 22px; align-items: start; }
+@media (max-width: 940px) {
+  .split, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+.stack-sm > * + * { margin-top: 8px; }
+.stack > * + * { margin-top: 14px; }
+.row { display: flex; align-items: center; gap: 10px; }
+.row-between { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.wrap { flex-wrap: wrap; }
+
+/* --- ledger figure list — replaces the generic "4 boxed stat tiles" default
+   with label:value pairs, right-aligned mono figures, hairline-separated.
+   One glance tells you it's a ledger, not a SaaS dashboard. -------------- */
+
+.ledger { border-top: 1px solid var(--line); }
+.ledger-row {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line-soft);
+}
+.ledger-row .k { font-size: 13.5px; color: var(--ink-2); }
+.ledger-row .v { font-family: var(--font-mono); font-size: 16px; font-weight: 500; font-variant-numeric: tabular-nums; flex: none; }
+.ledger-row .note { font-size: 11.5px; color: var(--faint); display: block; margin-top: 1px; }
+
+/* --- tags — small, quiet, text-first metadata markers. Not shaped like a
+   button, so they never compete with the Scale glyph for "this is a status"
+   attention. Distinct from a pill: no pronounced fill, just a tick of colour. */
+
+.tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.01em;
+  color: var(--muted); white-space: nowrap;
+}
+.tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; flex: none; background: var(--faint); }
+.tag-good::before { background: var(--verdigris); }
+.tag-bad::before  { background: var(--oxide); }
+.tag-warn::before { background: var(--ochre); }
+.tag-info::before { background: var(--slate); }
+.tag-good { color: var(--verdigris); }
+.tag-bad  { color: var(--oxide); }
+.tag-warn { color: var(--ochre); }
+.tag-info { color: var(--slate); }
+
+/* small circular pass/fail marker — deterministic-checks list. Colour set
+   inline per-check (good/bad/warn); this class only supplies the shape. */
+.dot { width: 7px; height: 7px; border-radius: 50%; flex: none; display: inline-block; }
+
+/* routing / verdict badge — used sparingly, only where a filled label earns
+   its weight (queue rows, the review header). Everywhere else, use .tag. */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; padding: 4px 10px 4px 8px;
+  border-radius: 20px; border: 1px solid transparent; white-space: nowrap;
+}
+.badge-good { background: var(--verdigris-soft); color: var(--verdigris); border-color: var(--verdigris-line); }
+.badge-bad  { background: var(--oxide-soft);  color: var(--oxide);  border-color: var(--oxide-line); }
+.badge-warn { background: var(--ochre-soft); color: var(--ochre); border-color: var(--ochre-line); }
+.badge-info { background: var(--slate-soft); color: var(--slate); border-color: var(--slate-line); }
+.badge-flat { background: var(--surface-2); color: var(--muted); border-color: var(--line); }
+
+/* --- queue rows --------------------------------------------------------- */
+
+.qrow {
+  display: block; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 14px 18px;
+  transition: border-color 150ms var(--ease-out), transform 150ms var(--ease-out), box-shadow 150ms var(--ease-out);
+}
+.qrow:hover { border-color: var(--verdigris-line); transform: translateY(-1px); box-shadow: 0 4px 14px -8px rgba(21,26,28,0.18); }
+.qrow + .qrow { margin-top: 8px; }
+.qtitle { font-family: var(--font-display); font-weight: 600; font-size: 16px; letter-spacing: -0.003em; }
+.qmeta { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+
+/* --- evidence — the actual product. Given room, not tucked in a disclosure. */
+
+.quote {
+  font-family: var(--font-display); font-size: 15px; font-style: italic; line-height: 1.6;
+  border-left: 2px solid var(--verdigris); padding: 3px 0 3px 14px;
+  color: var(--ink); margin: 8px 0;
+}
+.crit {
+  border: 1px solid var(--line); border-radius: 7px; padding: 13px 15px;
+  background: var(--surface);
+}
+.crit + .crit { margin-top: 8px; }
+.crit-satisfied { border-left: 3px solid var(--verdigris); }
+.crit-contradicted { border-left: 3px solid var(--oxide); }
+.crit-insufficient_evidence { border-left: 3px solid var(--ochre); }
+.crit-not_applicable { border-left: 3px solid var(--line); }
+
+.ledgerpane {
+  background: var(--surface-2); border: 1px solid var(--line);
+  border-radius: 7px; padding: 16px 18px; font-size: 14px;
+  white-space: pre-wrap; line-height: 1.7; max-height: 340px; overflow: auto;
+  font-family: var(--font-display);
+}
+mark {
+  background: var(--verdigris-soft); color: var(--ink); padding: 1px 2px;
+  border-radius: 2px; box-shadow: 0 0 0 1px var(--verdigris-line);
+}
+
+/* --- controls ------------------------------------------------------------- */
+
+.btn {
+  font: inherit; font-size: 13.5px; font-weight: 560; font-family: var(--font-sans);
+  padding: 8px 14px; border-radius: 7px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); cursor: pointer;
+  transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out), transform 150ms var(--ease-out);
+}
+.btn:hover { background: var(--surface-2); border-color: var(--faint); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-primary:hover { background: #262e2f; }
+.btn-good { border-color: var(--verdigris-line); background: var(--verdigris-soft); color: var(--verdigris); }
+.btn-good:hover { background: #d2e3da; }
+.btn-bad  { border-color: var(--oxide-line); background: var(--oxide-soft);  color: var(--oxide); }
+.btn-bad:hover { background: #f0d3c8; }
+.btn-warn { border-color: var(--ochre-line); background: var(--ochre-soft); color: var(--ochre); }
+.btn-warn:hover { background: #e9dcb8; }
+.btn-sm { padding: 5px 10px; font-size: 12.5px; }
+
+textarea, input, select {
+  font: inherit; font-size: 13.5px; width: 100%; font-family: var(--font-sans);
+  padding: 9px 11px; border: 1px solid var(--line); border-radius: 7px;
+  background: var(--surface); color: var(--ink); resize: vertical;
+  transition: border-color 150ms var(--ease-out);
+}
+textarea:hover, input:hover, select:hover { border-color: var(--faint); }
+
+/* --- misc ------------------------------------------------------------------*/
+
+.bar { height: 5px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+.bar > span { display: block; height: 100%; border-radius: 4px; transition: width 400ms var(--ease-out); }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th {
+  text-align: left; font-weight: 600; font-size: 10.5px; text-transform: uppercase;
+  letter-spacing: 0.07em; color: var(--faint); padding: 7px 10px; border-bottom: 1px solid var(--line);
+  font-family: var(--font-sans);
+}
+td { padding: 8px 10px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+
+.notice {
+  border: 1px solid var(--ochre-line); background: var(--ochre-soft);
+  border-radius: 8px; padding: 13px 16px; font-size: 13.5px; color: #5f4816;
+}
+.notice-info { border-color: var(--slate-line); background: var(--slate-soft); color: var(--slate); }
+
+.callout {
+  border-left: 3px solid var(--verdigris); background: var(--verdigris-soft);
+  padding: 13px 18px; border-radius: 0 8px 8px 0; font-size: 14.5px; color: #1f4238;
+  font-family: var(--font-display);
+}
+
+/* --- eligibility lens (policy page) ----------------------------------------
+   A segmented control, not another pill row — this picks between whole
+   authorities, a different kind of choice than a status tag, and needs to
+   read that way. --------------------------------------------------------- */
+
+.lens-tabs {
+  display: inline-flex; padding: 3px; background: var(--surface-2);
+  border-radius: 9px; gap: 2px;
+}
+.lens-tab {
+  font: inherit; font-size: 12.5px; font-weight: 600; font-family: var(--font-sans);
+  padding: 7px 13px; border-radius: 7px; border: none; background: transparent;
+  color: var(--muted); cursor: pointer; white-space: nowrap;
+  transition: background-color 150ms var(--ease-out), color 150ms var(--ease-out), box-shadow 150ms var(--ease-out);
+}
+.lens-tab:hover { color: var(--ink); }
+.lens-tab.on { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(21,26,28,0.14); }
+
+.lens-diff {
+  padding: 11px 14px; border: 1px solid var(--slate-line); background: var(--slate-soft);
+  border-radius: 8px; font-size: 12.5px; color: var(--ink-2); line-height: 1.55;
+}
+
+/* --- signature hero (queue page) ------------------------------------------ */
+
+.hero {
+  display: grid; grid-template-columns: auto 1fr; gap: 30px; align-items: center;
+  padding: 8px 0 30px;
+}
+@media (max-width: 720px) { .hero { grid-template-columns: 1fr; } }
